@@ -1,9 +1,17 @@
 'use strict';
-const bookmarks   = require('../bookmarks');
 const url         = require('url');
+const _           = require('lodash');
 
+exports.treefy = treefy;
 exports.domain = domain;
 exports.treefyByPathname = treefyByPathname;
+
+function treefy(urls){
+  let domains = exports.domain(urls);
+  return _.map(domains, function(domain){
+    return exports.treefyByPathname(domain);
+  });
+};
 
 function domain(links){
   links = _.map(links, parse);
@@ -20,6 +28,9 @@ function domain(links){
 };
 
 function parse(link){
+  if(_.isString(link)){
+    return url.parse(link);
+  }
   return url.parse(link.url);
 };
 
