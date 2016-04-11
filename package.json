@@ -1,0 +1,38 @@
+{
+  "name": "url-graph",
+  "version": "0.0.1",
+  "description": "make a graph from a set of urls",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test",
+    "gulp": "gulp"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ansteh/url-graph.git"
+  },
+  "keywords": [
+    "url",
+    "graph"
+  ],
+  "author": "Andre Stehle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ansteh/url-graph/issues"
+  },
+  "dependencies": {
+    "lodash": "^4.10.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jasmine": "^2.3.0",
+    "gulp-util": "^3.0.7",
+    "jasmine": "^2.4.1"
+  }
+}
