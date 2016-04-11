@@ -19,7 +19,9 @@
   },
   "keywords": [
     "url",
-    "graph"
+    "graph",
+    "tree",
+    "url domains"
   ],
   "author": "Andre Stehle",
   "license": "MIT",
