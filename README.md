@@ -3,7 +3,7 @@
 Using npm:
 
 ```js
-npm install shape-json
+npm install url-graph
 ```
 In Node.js:
 
