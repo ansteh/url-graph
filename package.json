@@ -1,6 +1,6 @@
 {
   "name": "url-graph",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "make a graph from a set of urls",
   "main": "index.js",
   "scripts": {
