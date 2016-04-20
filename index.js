@@ -1,6 +1,17 @@
 'use strict';
 const url         = require('url');
-const _           = require('lodash');
+const _           = {
+  map:        require('lodash/map'),
+  trimStart:  require('lodash/trimStart'),
+  sortBy:     require('lodash/sortBy'),
+  isString:   require('lodash/isString'),
+  forEach:    require('lodash/forEach'),
+  remove:     require('lodash/remove'),
+  has:        require('lodash/has'),
+  groupBy:    require('lodash/groupBy'),
+  split:      require('lodash/split'),
+  findIndex:  require('lodash/findIndex')
+};
 
 exports.treefy = treefy;
 exports.domain = domain;
@@ -57,11 +68,11 @@ function treefyByPathname(urls){
 };
 
 function expandTree(node, name){
-  if(_.has(node, 'branch') == false){
+  if(_.has(node, 'branch') === false){
     node.branch = [];
   }
 
-  let index = _.findIndex(node.branch, function(o) { return o.name == name; });
+  let index = _.findIndex(node.branch, function(o) { return o.name === name; });
   if(index === -1){
     index = node.branch.push({
       name: name,
