@@ -74,19 +74,12 @@ console.log(reducedTree);
 [{
   "name":"github.com/ansteh/shape-json/blob/master/lib",
   "count":4,
-  "branch":[{
-    "name":"chain.js",
-    "count":1
-  },{
-    "name":"core.js",
-    "count":1
-  },{
-    "name":"parse.js",
-    "count":1
-  },{
-    "name":"scheme.js",
-    "count":1
-  }]
+  "branch":[
+    { "name": "chain.js",  "count":1 },
+    { "name": "core.js",   "count":1 },
+    { "name": "parse.js",  "count":1 },
+    { "name": "scheme.js", "count":1 }
+  ]
 }]
 ```
 
