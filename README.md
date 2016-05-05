@@ -55,6 +55,41 @@ console.log(domains);
   }]
 }]
 ```
+
+## link directories
+merge neighboring nodes with same count
+
+```js
+let urls = [
+  'https://github.com/ansteh/shape-json/blob/master/lib/chain.js',
+  'https://github.com/ansteh/shape-json/blob/master/lib/core.js',
+  'https://github.com/ansteh/shape-json/blob/master/lib/parse.js',
+  'https://github.com/ansteh/shape-json/blob/master/lib/scheme.js'
+];
+
+let reducedTree = graph.linkDirectories(urls);
+console.log(reducedTree);
+```
+```json
+[{
+  "name":"github.com/ansteh/shape-json/blob/master/lib",
+  "count":4,
+  "branch":[{
+    "name":"chain.js",
+    "count":1
+  },{
+    "name":"core.js",
+    "count":1
+  },{
+    "name":"parse.js",
+    "count":1
+  },{
+    "name":"scheme.js",
+    "count":1
+  }]
+}]
+```
+
 ## License
 
 MIT © [Andre Stehle](https://github.com/ansteh)

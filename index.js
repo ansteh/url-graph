@@ -10,12 +10,14 @@ const _           = {
   has:        require('lodash/has'),
   groupBy:    require('lodash/groupBy'),
   split:      require('lodash/split'),
-  findIndex:  require('lodash/findIndex')
+  findIndex:  require('lodash/findIndex'),
+  join:       require('lodash/join')
 };
 
 exports.treefy = treefy;
 exports.domain = domain;
 exports.treefyByPathname = treefyByPathname;
+exports.linkDirectories = linkDirectories;
 
 function treefy(urls){
   let domains = exports.domain(urls);
@@ -84,4 +86,19 @@ function expandTree(node, name){
   branchNode.count += 1;
 
   return branchNode;
+};
+
+function linkDirectories(urls){
+  let treeList = treefy(urls);
+  _.forEach(treeList, linkDirectory);
+  return treeList;
+};
+
+function linkDirectory(node){
+  if(node.branch && node.branch.length === 1){
+    let child = node.branch[0];
+    node.name = _.join([node.name, child.name], '/');
+    node.branch = child.branch;
+    linkDirectory(node);
+  }
 };

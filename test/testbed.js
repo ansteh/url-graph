@@ -35,4 +35,32 @@ module.exports = [{
       }]
     }]
   }
+}, {
+  name: "readme intro: linkDirectories",
+  options: {
+    instruction: 'linkDirectories',
+    input: [
+      'https://github.com/ansteh/shape-json/blob/master/lib/chain.js',
+      'https://github.com/ansteh/shape-json/blob/master/lib/core.js',
+      'https://github.com/ansteh/shape-json/blob/master/lib/parse.js',
+      'https://github.com/ansteh/shape-json/blob/master/lib/scheme.js'
+    ],
+    output: [{
+      "name":"github.com/ansteh/shape-json/blob/master/lib",
+      "count":4,
+      "branch":[{
+        "name":"chain.js",
+        "count":1
+      },{
+        "name":"core.js",
+        "count":1
+      },{
+        "name":"parse.js",
+        "count":1
+      },{
+        "name":"scheme.js",
+        "count":1
+      }]
+    }]
+  }
 }];
