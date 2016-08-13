@@ -1,6 +1,6 @@
 {
   "name": "url-graph",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "make a graph from a set of urls",
   "main": "index.js",
   "scripts": {
@@ -29,7 +29,7 @@
     "url": "https://github.com/ansteh/url-graph/issues"
   },
   "dependencies": {
-    "lodash": "^4.12.0"
+    "lodash": "^4.15.0"
   },
   "devDependencies": {
     "babel-core": "^6.7.6",
